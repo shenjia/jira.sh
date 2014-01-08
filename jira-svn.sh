@@ -16,7 +16,7 @@ function ci() {
             FILES=$@
         fi  
         TITLE=`title $ISSUE`
-        if [ -n $TITLE ]
+        if [ -n "$TITLE" ]
         then
             COMMIT="svn commit $FILES -m \"$ISSUE $TITLE\""
             echo -e "$COMMIT ? (y/n):\c"
